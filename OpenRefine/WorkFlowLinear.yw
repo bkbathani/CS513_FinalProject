@@ -1,0 +1,568 @@
+#@begin Linear_OR #@desc Linear OpenRefine Workflow
+#@param col-name:Season4Date
+#@param col-name:PetFood
+#@param col-name:Season3Date
+#@param col-name:Facebook
+#@param col-name:Juices
+#@param expression:grel:round(value.toNumber()*10000)/10000.
+#@param col-name:Youtube
+#@param col-name:Wine
+#@param col-name:County
+#@param col-name:y
+#@param col-name:street
+#@param col-name:Season1Time_3
+#@param col-name:Nursery
+#@param col-name:Tofu
+#@param col-name:Honey
+#@param col-name:Prepared
+#@param newColumnName:Season3ToDate
+#@param col-name:Season2Time
+#@param expression:grel:if(value=="Y","True",_"False")
+#@param col-name:Twitter
+#@param col-name:Organic
+#@param col-name:WICcash
+#@param newColumnName:Season2FromDate
+#@param expression:grel:value.replace(/%@#!\\\\\\[\\]\\(\\)\\?/,"")
+#@param col-name:State
+#@param col-name:OtherMedia
+#@param oldColumnName:Season3Date_1
+#@param expression:value.toTitlecase()
+#@param col-name:Crafts
+#@param col-name:Season1Date
+#@param col-name:x
+#@param col-name:WildHarvested
+#@param col-name:Season1Time_5
+#@param col-name:Season1Time_6
+#@param newColumnName:Season4FromDate
+#@param col-name:Eggs
+#@param newColumnName:Season2ToDate
+#@param newColumnName:Season1FromDate
+#@param col-name:Poultry
+#@param col-name:Bakedgoods
+#@param col-name:Maple
+#@param col-name:Grains
+#@param col-name:WIC
+#@param col-name:Trees
+#@param col-name:Season1Time_7
+#@param col-name:Beans
+#@param col-name:Herbs
+#@param col-name:Flowers
+#@param separator:":_"
+#@param removeOriginalColumn:True
+#@param col-name:Season4Time
+#@param newColumnName:Season3FromDate
+#@param col-name:Location
+#@param col-name:SFMNP
+#@param col-name:Season1Time_4
+#@param separator:";"
+#@param col-name:Jams
+#@param col-name:Coffee
+#@param col-name:Season1Time
+#@param col-name:Nuts
+#@param col-name:Seafood
+#@param col-name:Fruits
+#@param oldColumnName:Season4Date_1
+#@param oldColumnName:Season1Date_2
+#@param col-name:Cheese
+#@param oldColumnName:Season4Date_2
+#@param col-name:Mushrooms
+#@param removeOriginalColumn:False
+#@param separator:"_to_"
+#@param col-name:Meat
+#@param col-name:Plants
+#@param newColumnName:Season4ToDate
+#@param col-name:Vegetables
+#@param col-name:MarketName
+#@param col-name:Season1Time_1
+#@param col-name:Website
+#@param col-name:Season2Date
+#@param oldColumnName:Season2Date_1
+#@param oldColumnName:Season3Date_2
+#@param newColumnName:Season1ToDate
+#@param col-name:Soap
+#@param expression:value.trim()
+#@param col-name:SNAP
+#@param oldColumnName:Season2Date_2
+#@param col-name:Season1Time_2
+#@param oldColumnName:Season1Date_1
+#@param col-name:Credit
+#@param col-name:Season1Time_8
+#@param col-name:Season3Time
+#@in table0
+#@out table79
+#@begin core/text-transform0#@desc Text transform on cells in column MarketName using expression value.trim()
+#@param col-name:MarketName
+#@param expression:value.trim()
+#@in table0
+#@out table1
+#@end core/text-transform0
+#@begin core/text-transform1#@desc Text transform on cells in column MarketName using expression value.toTitlecase()
+#@param col-name:MarketName
+#@param expression:value.toTitlecase()
+#@in table1
+#@out table2
+#@end core/text-transform1
+#@begin core/text-transform2#@desc Text transform on cells in column Website using expression value.trim()
+#@param col-name:Website
+#@param expression:value.trim()
+#@in table2
+#@out table3
+#@end core/text-transform2
+#@begin core/text-transform3#@desc Text transform on cells in column Facebook using expression value.trim()
+#@param col-name:Facebook
+#@param expression:value.trim()
+#@in table3
+#@out table4
+#@end core/text-transform3
+#@begin core/text-transform4#@desc Text transform on cells in column Twitter using expression value.trim()
+#@param col-name:Twitter
+#@param expression:value.trim()
+#@in table4
+#@out table5
+#@end core/text-transform4
+#@begin core/text-transform5#@desc Text transform on cells in column Youtube using expression value.trim()
+#@param col-name:Youtube
+#@param expression:value.trim()
+#@in table5
+#@out table6
+#@end core/text-transform5
+#@begin core/text-transform6#@desc Text transform on cells in column OtherMedia using expression value.trim()
+#@param col-name:OtherMedia
+#@param expression:value.trim()
+#@in table6
+#@out table7
+#@end core/text-transform6
+#@begin core/text-transform7#@desc Text transform on cells in column street using expression value.toTitlecase()
+#@param col-name:street
+#@param expression:value.toTitlecase()
+#@in table7
+#@out table8
+#@end core/text-transform7
+#@begin core/text-transform8#@desc Text transform on cells in column County using expression value.trim()
+#@param col-name:County
+#@param expression:value.trim()
+#@in table8
+#@out table9
+#@end core/text-transform8
+#@begin core/text-transform9#@desc Text transform on cells in column County using expression value.toTitlecase()
+#@param col-name:County
+#@param expression:value.toTitlecase()
+#@in table9
+#@out table10
+#@end core/text-transform9
+#@begin core/text-transform10#@desc Text transform on cells in column State using expression value.trim()
+#@param col-name:State
+#@param expression:value.trim()
+#@in table10
+#@out table11
+#@end core/text-transform10
+#@begin core/text-transform11#@desc Text transform on cells in column State using expression value.toTitlecase()
+#@param col-name:State
+#@param expression:value.toTitlecase()
+#@in table11
+#@out table12
+#@end core/text-transform11
+#@begin core/text-transform12#@desc Text transform on cells in column Location using expression value.trim()
+#@param col-name:Location
+#@param expression:value.trim()
+#@in table12
+#@out table13
+#@end core/text-transform12
+#@begin core/text-transform13#@desc Text transform on cells in column Location using expression value.toTitlecase()
+#@param col-name:Location
+#@param expression:value.toTitlecase()
+#@in table13
+#@out table14
+#@end core/text-transform13
+#@begin core/text-transform14#@desc Text transform on cells in column Location using expression value.trim()
+#@param col-name:Location
+#@param expression:value.trim()
+#@in table14
+#@out table15
+#@end core/text-transform14
+#@begin core/text-transform15#@desc Text transform on cells in column Location using expression value.toTitlecase()
+#@param col-name:Location
+#@param expression:value.toTitlecase()
+#@in table15
+#@out table16
+#@end core/text-transform15
+#@begin core/text-transform16#@desc Text transform on cells in column Credit using expression grel:if(value==\"Y\",\"True\", \"False\")
+#@param col-name:Credit
+#@param expression:grel:if(value=="Y","True",_"False")
+#@in table16
+#@out table17
+#@end core/text-transform16
+#@begin core/text-transform17#@desc Text transform on cells in column WIC using expression grel:if(value==\"Y\",\"True\", \"False\")
+#@param col-name:WIC
+#@param expression:grel:if(value=="Y","True",_"False")
+#@in table17
+#@out table18
+#@end core/text-transform17
+#@begin core/text-transform18#@desc Text transform on cells in column WICcash using expression grel:if(value==\"Y\",\"True\", \"False\")
+#@param col-name:WICcash
+#@param expression:grel:if(value=="Y","True",_"False")
+#@in table18
+#@out table19
+#@end core/text-transform18
+#@begin core/text-transform19#@desc Text transform on cells in column SFMNP using expression grel:if(value==\"Y\",\"True\", \"False\")
+#@param col-name:SFMNP
+#@param expression:grel:if(value=="Y","True",_"False")
+#@in table19
+#@out table20
+#@end core/text-transform19
+#@begin core/text-transform20#@desc Text transform on cells in column SNAP using expression grel:if(value==\"Y\",\"True\", \"False\")
+#@param col-name:SNAP
+#@param expression:grel:if(value=="Y","True",_"False")
+#@in table20
+#@out table21
+#@end core/text-transform20
+#@begin core/text-transform21#@desc Text transform on cells in column Organic using expression grel:if(value==\"Y\",\"True\", \"False\")
+#@param col-name:Organic
+#@param expression:grel:if(value=="Y","True",_"False")
+#@in table21
+#@out table22
+#@end core/text-transform21
+#@begin core/text-transform22#@desc Text transform on cells in column Bakedgoods using expression grel:if(value==\"Y\",\"True\", \"False\")
+#@param col-name:Bakedgoods
+#@param expression:grel:if(value=="Y","True",_"False")
+#@in table22
+#@out table23
+#@end core/text-transform22
+#@begin core/text-transform23#@desc Text transform on cells in column Cheese using expression grel:if(value==\"Y\",\"True\", \"False\")
+#@param col-name:Cheese
+#@param expression:grel:if(value=="Y","True",_"False")
+#@in table23
+#@out table24
+#@end core/text-transform23
+#@begin core/text-transform24#@desc Text transform on cells in column Crafts using expression grel:if(value==\"Y\",\"True\", \"False\")
+#@param col-name:Crafts
+#@param expression:grel:if(value=="Y","True",_"False")
+#@in table24
+#@out table25
+#@end core/text-transform24
+#@begin core/text-transform25#@desc Text transform on cells in column Flowers using expression grel:if(value==\"Y\",\"True\", \"False\")
+#@param col-name:Flowers
+#@param expression:grel:if(value=="Y","True",_"False")
+#@in table25
+#@out table26
+#@end core/text-transform25
+#@begin core/text-transform26#@desc Text transform on cells in column Eggs using expression grel:if(value==\"Y\",\"True\", \"False\")
+#@param col-name:Eggs
+#@param expression:grel:if(value=="Y","True",_"False")
+#@in table26
+#@out table27
+#@end core/text-transform26
+#@begin core/text-transform27#@desc Text transform on cells in column Seafood using expression grel:if(value==\"Y\",\"True\", \"False\")
+#@param col-name:Seafood
+#@param expression:grel:if(value=="Y","True",_"False")
+#@in table27
+#@out table28
+#@end core/text-transform27
+#@begin core/text-transform28#@desc Text transform on cells in column Herbs using expression grel:if(value==\"Y\",\"True\", \"False\")
+#@param col-name:Herbs
+#@param expression:grel:if(value=="Y","True",_"False")
+#@in table28
+#@out table29
+#@end core/text-transform28
+#@begin core/text-transform29#@desc Text transform on cells in column Vegetables using expression grel:if(value==\"Y\",\"True\", \"False\")
+#@param col-name:Vegetables
+#@param expression:grel:if(value=="Y","True",_"False")
+#@in table29
+#@out table30
+#@end core/text-transform29
+#@begin core/text-transform30#@desc Text transform on cells in column Honey using expression grel:if(value==\"Y\",\"True\", \"False\")
+#@param col-name:Honey
+#@param expression:grel:if(value=="Y","True",_"False")
+#@in table30
+#@out table31
+#@end core/text-transform30
+#@begin core/text-transform31#@desc Text transform on cells in column Jams using expression grel:if(value==\"Y\",\"True\", \"False\")
+#@param col-name:Jams
+#@param expression:grel:if(value=="Y","True",_"False")
+#@in table31
+#@out table32
+#@end core/text-transform31
+#@begin core/text-transform32#@desc Text transform on cells in column Maple using expression grel:if(value==\"Y\",\"True\", \"False\")
+#@param col-name:Maple
+#@param expression:grel:if(value=="Y","True",_"False")
+#@in table32
+#@out table33
+#@end core/text-transform32
+#@begin core/text-transform33#@desc Text transform on cells in column Meat using expression grel:if(value==\"Y\",\"True\", \"False\")
+#@param col-name:Meat
+#@param expression:grel:if(value=="Y","True",_"False")
+#@in table33
+#@out table34
+#@end core/text-transform33
+#@begin core/text-transform34#@desc Text transform on cells in column Nursery using expression grel:if(value==\"Y\",\"True\", \"False\")
+#@param col-name:Nursery
+#@param expression:grel:if(value=="Y","True",_"False")
+#@in table34
+#@out table35
+#@end core/text-transform34
+#@begin core/text-transform35#@desc Text transform on cells in column Nuts using expression grel:if(value==\"Y\",\"True\", \"False\")
+#@param col-name:Nuts
+#@param expression:grel:if(value=="Y","True",_"False")
+#@in table35
+#@out table36
+#@end core/text-transform35
+#@begin core/text-transform36#@desc Text transform on cells in column Plants using expression grel:if(value==\"Y\",\"True\", \"False\")
+#@param col-name:Plants
+#@param expression:grel:if(value=="Y","True",_"False")
+#@in table36
+#@out table37
+#@end core/text-transform36
+#@begin core/text-transform37#@desc Text transform on cells in column Poultry using expression grel:if(value==\"Y\",\"True\", \"False\")
+#@param col-name:Poultry
+#@param expression:grel:if(value=="Y","True",_"False")
+#@in table37
+#@out table38
+#@end core/text-transform37
+#@begin core/text-transform38#@desc Text transform on cells in column Prepared using expression grel:if(value==\"Y\",\"True\", \"False\")
+#@param col-name:Prepared
+#@param expression:grel:if(value=="Y","True",_"False")
+#@in table38
+#@out table39
+#@end core/text-transform38
+#@begin core/text-transform39#@desc Text transform on cells in column Soap using expression grel:if(value==\"Y\",\"True\", \"False\")
+#@param col-name:Soap
+#@param expression:grel:if(value=="Y","True",_"False")
+#@in table39
+#@out table40
+#@end core/text-transform39
+#@begin core/text-transform40#@desc Text transform on cells in column Trees using expression grel:if(value==\"Y\",\"True\", \"False\")
+#@param col-name:Trees
+#@param expression:grel:if(value=="Y","True",_"False")
+#@in table40
+#@out table41
+#@end core/text-transform40
+#@begin core/text-transform41#@desc Text transform on cells in column Wine using expression grel:if(value==\"Y\",\"True\", \"False\")
+#@param col-name:Wine
+#@param expression:grel:if(value=="Y","True",_"False")
+#@in table41
+#@out table42
+#@end core/text-transform41
+#@begin core/text-transform42#@desc Text transform on cells in column Coffee using expression grel:if(value==\"Y\",\"True\", \"False\")
+#@param col-name:Coffee
+#@param expression:grel:if(value=="Y","True",_"False")
+#@in table42
+#@out table43
+#@end core/text-transform42
+#@begin core/text-transform43#@desc Text transform on cells in column Beans using expression grel:if(value==\"Y\",\"True\", \"False\")
+#@param col-name:Beans
+#@param expression:grel:if(value=="Y","True",_"False")
+#@in table43
+#@out table44
+#@end core/text-transform43
+#@begin core/text-transform44#@desc Text transform on cells in column Fruits using expression grel:if(value==\"Y\",\"True\", \"False\")
+#@param col-name:Fruits
+#@param expression:grel:if(value=="Y","True",_"False")
+#@in table44
+#@out table45
+#@end core/text-transform44
+#@begin core/text-transform45#@desc Text transform on cells in column Grains using expression grel:if(value==\"Y\",\"True\", \"False\")
+#@param col-name:Grains
+#@param expression:grel:if(value=="Y","True",_"False")
+#@in table45
+#@out table46
+#@end core/text-transform45
+#@begin core/text-transform46#@desc Text transform on cells in column Juices using expression grel:if(value==\"Y\",\"True\", \"False\")
+#@param col-name:Juices
+#@param expression:grel:if(value=="Y","True",_"False")
+#@in table46
+#@out table47
+#@end core/text-transform46
+#@begin core/text-transform47#@desc Text transform on cells in column Mushrooms using expression grel:if(value==\"Y\",\"True\", \"False\")
+#@param col-name:Mushrooms
+#@param expression:grel:if(value=="Y","True",_"False")
+#@in table47
+#@out table48
+#@end core/text-transform47
+#@begin core/text-transform48#@desc Text transform on cells in column PetFood using expression grel:if(value==\"Y\",\"True\", \"False\")
+#@param col-name:PetFood
+#@param expression:grel:if(value=="Y","True",_"False")
+#@in table48
+#@out table49
+#@end core/text-transform48
+#@begin core/text-transform49#@desc Text transform on cells in column Tofu using expression grel:if(value==\"Y\",\"True\", \"False\")
+#@param col-name:Tofu
+#@param expression:grel:if(value=="Y","True",_"False")
+#@in table49
+#@out table50
+#@end core/text-transform49
+#@begin core/text-transform50#@desc Text transform on cells in column WildHarvested using expression grel:if(value==\"Y\",\"True\", \"False\")
+#@param col-name:WildHarvested
+#@param expression:grel:if(value=="Y","True",_"False")
+#@in table50
+#@out table51
+#@end core/text-transform50
+#@begin core/text-transform51#@desc Text transform on cells in column Season1Date using expression grel:value.replace(/%@#!\\\\\\[\\]\\(\\)\\?/,\"\")
+#@param col-name:Season1Date
+#@param expression:grel:value.replace(/%@#!\\\\\\[\\]\\(\\)\\?/,"")
+#@in table51
+#@out table52
+#@end core/text-transform51
+#@begin core/column-split0#@desc Split column Season1Date by separator
+#@param col-name:Season1Date
+#@param separator:"_to_"
+#@param removeOriginalColumn:False
+#@in table52
+#@out table53
+#@end core/column-split0
+#@begin core/column-rename0#@desc Rename column Season1Date 1 to Season1FromDate
+#@param oldColumnName:Season1Date_1
+#@param newColumnName:Season1FromDate
+#@in table53
+#@out table54
+#@end core/column-rename0
+#@begin core/column-rename1#@desc Rename column Season1Date 2 to Season1ToDate
+#@param oldColumnName:Season1Date_2
+#@param newColumnName:Season1ToDate
+#@in table54
+#@out table55
+#@end core/column-rename1
+#@begin core/column-split1#@desc Split column Season1Time by separator
+#@param col-name:Season1Time
+#@param separator:":_"
+#@param removeOriginalColumn:False
+#@in table55
+#@out table56
+#@end core/column-split1
+#@begin core/column-removal0#@desc Remove column Season1Time 1
+#@param col-name:Season1Time_1
+#@in table56
+#@out table57
+#@end core/column-removal0
+#@begin core/column-removal1#@desc Remove column Season1Time 2
+#@param col-name:Season1Time_2
+#@in table57
+#@out table58
+#@end core/column-removal1
+#@begin core/column-removal2#@desc Remove column Season1Time 3
+#@param col-name:Season1Time_3
+#@in table58
+#@out table59
+#@end core/column-removal2
+#@begin core/column-removal3#@desc Remove column Season1Time 4
+#@param col-name:Season1Time_4
+#@in table59
+#@out table60
+#@end core/column-removal3
+#@begin core/column-removal4#@desc Remove column Season1Time 5
+#@param col-name:Season1Time_5
+#@in table60
+#@out table61
+#@end core/column-removal4
+#@begin core/column-removal5#@desc Remove column Season1Time 6
+#@param col-name:Season1Time_6
+#@in table61
+#@out table62
+#@end core/column-removal5
+#@begin core/column-removal6#@desc Remove column Season1Time 7
+#@param col-name:Season1Time_7
+#@in table62
+#@out table63
+#@end core/column-removal6
+#@begin core/column-removal7#@desc Remove column Season1Time 8
+#@param col-name:Season1Time_8
+#@in table63
+#@out table64
+#@end core/column-removal7
+#@begin core/column-split2#@desc Split column Season1Time by separator
+#@param col-name:Season1Time
+#@param separator:";"
+#@param removeOriginalColumn:False
+#@in table64
+#@out table65
+#@end core/column-split2
+#@begin core/column-split3#@desc Split column Season2Date by separator
+#@param col-name:Season2Date
+#@param separator:"_to_"
+#@param removeOriginalColumn:False
+#@in table65
+#@out table66
+#@end core/column-split3
+#@begin core/column-rename2#@desc Rename column Season2Date 1 to Season2FromDate
+#@param oldColumnName:Season2Date_1
+#@param newColumnName:Season2FromDate
+#@in table66
+#@out table67
+#@end core/column-rename2
+#@begin core/column-rename3#@desc Rename column Season2Date 2 to Season2ToDate
+#@param oldColumnName:Season2Date_2
+#@param newColumnName:Season2ToDate
+#@in table67
+#@out table68
+#@end core/column-rename3
+#@begin core/column-split4#@desc Split column Season3Date by separator
+#@param col-name:Season3Date
+#@param separator:"_to_"
+#@param removeOriginalColumn:True
+#@in table68
+#@out table69
+#@end core/column-split4
+#@begin core/column-rename4#@desc Rename column Season3Date 1 to Season3FromDate
+#@param oldColumnName:Season3Date_1
+#@param newColumnName:Season3FromDate
+#@in table69
+#@out table70
+#@end core/column-rename4
+#@begin core/column-rename5#@desc Rename column Season3Date 2 to Season3ToDate
+#@param oldColumnName:Season3Date_2
+#@param newColumnName:Season3ToDate
+#@in table70
+#@out table71
+#@end core/column-rename5
+#@begin core/column-split5#@desc Split column Season4Date by separator
+#@param col-name:Season4Date
+#@param separator:"_to_"
+#@param removeOriginalColumn:False
+#@in table71
+#@out table72
+#@end core/column-split5
+#@begin core/column-rename6#@desc Rename column Season4Date 1 to Season4FromDate
+#@param oldColumnName:Season4Date_1
+#@param newColumnName:Season4FromDate
+#@in table72
+#@out table73
+#@end core/column-rename6
+#@begin core/column-rename7#@desc Rename column Season4Date 2 to Season4ToDate
+#@param oldColumnName:Season4Date_2
+#@param newColumnName:Season4ToDate
+#@in table73
+#@out table74
+#@end core/column-rename7
+#@begin core/column-split6#@desc Split column Season2Time by separator
+#@param col-name:Season2Time
+#@param separator:";"
+#@param removeOriginalColumn:False
+#@in table74
+#@out table75
+#@end core/column-split6
+#@begin core/column-split7#@desc Split column Season3Time by separator
+#@param col-name:Season3Time
+#@param separator:";"
+#@param removeOriginalColumn:False
+#@in table75
+#@out table76
+#@end core/column-split7
+#@begin core/column-split8#@desc Split column Season4Time by separator
+#@param col-name:Season4Time
+#@param separator:";"
+#@param removeOriginalColumn:False
+#@in table76
+#@out table77
+#@end core/column-split8
+#@begin core/text-transform52#@desc Text transform on cells in column x using expression grel:round(value.toNumber()*10000)/10000.
+#@param col-name:x
+#@param expression:grel:round(value.toNumber()*10000)/10000.
+#@in table77
+#@out table78
+#@end core/text-transform52
+#@begin core/text-transform53#@desc Text transform on cells in column y using expression grel:round(value.toNumber()*10000)/10000.
+#@param col-name:y
+#@param expression:grel:round(value.toNumber()*10000)/10000.
+#@in table78
+#@out table79
+#@end core/text-transform53
+#@end Linear_OR

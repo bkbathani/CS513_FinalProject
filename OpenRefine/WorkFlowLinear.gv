@@ -1,0 +1,600 @@
+
+/* Start of top-level graph */
+digraph Workflow {
+rankdir=TB
+
+/* Title for graph */
+fontname=Helvetica; fontsize=18; labelloc=t
+label=Linear_OR
+
+/* Start of double cluster for drawing box around nodes in workflow */
+subgraph cluster_workflow_box_outer { label=""; color=black; penwidth=2
+subgraph cluster_workflow_box_inner { label=""; penwidth=0
+
+/* Style for nodes representing atomic programs in workflow */
+node[shape=box style=filled fillcolor="#CCFFCC" peripheries=1 fontname=Helvetica]
+
+/* Nodes representing atomic programs in workflow */
+"core/text-transform0#" [shape=record rankdir=LR label="{<f0> core/text-transform0# |<f1> Text transform on cells in column MarketName using expression value.trim()}"];
+"core/text-transform1#" [shape=record rankdir=LR label="{<f0> core/text-transform1# |<f1> Text transform on cells in column MarketName using expression value.toTitlecase()}"];
+"core/text-transform2#" [shape=record rankdir=LR label="{<f0> core/text-transform2# |<f1> Text transform on cells in column Website using expression value.trim()}"];
+"core/text-transform3#" [shape=record rankdir=LR label="{<f0> core/text-transform3# |<f1> Text transform on cells in column Facebook using expression value.trim()}"];
+"core/text-transform4#" [shape=record rankdir=LR label="{<f0> core/text-transform4# |<f1> Text transform on cells in column Twitter using expression value.trim()}"];
+"core/text-transform5#" [shape=record rankdir=LR label="{<f0> core/text-transform5# |<f1> Text transform on cells in column Youtube using expression value.trim()}"];
+"core/text-transform6#" [shape=record rankdir=LR label="{<f0> core/text-transform6# |<f1> Text transform on cells in column OtherMedia using expression value.trim()}"];
+"core/text-transform7#" [shape=record rankdir=LR label="{<f0> core/text-transform7# |<f1> Text transform on cells in column street using expression value.toTitlecase()}"];
+"core/text-transform8#" [shape=record rankdir=LR label="{<f0> core/text-transform8# |<f1> Text transform on cells in column County using expression value.trim()}"];
+"core/text-transform9#" [shape=record rankdir=LR label="{<f0> core/text-transform9# |<f1> Text transform on cells in column County using expression value.toTitlecase()}"];
+"core/text-transform10#" [shape=record rankdir=LR label="{<f0> core/text-transform10# |<f1> Text transform on cells in column State using expression value.trim()}"];
+"core/text-transform11#" [shape=record rankdir=LR label="{<f0> core/text-transform11# |<f1> Text transform on cells in column State using expression value.toTitlecase()}"];
+"core/text-transform12#" [shape=record rankdir=LR label="{<f0> core/text-transform12# |<f1> Text transform on cells in column Location using expression value.trim()}"];
+"core/text-transform13#" [shape=record rankdir=LR label="{<f0> core/text-transform13# |<f1> Text transform on cells in column Location using expression value.toTitlecase()}"];
+"core/text-transform14#" [shape=record rankdir=LR label="{<f0> core/text-transform14# |<f1> Text transform on cells in column Location using expression value.trim()}"];
+"core/text-transform15#" [shape=record rankdir=LR label="{<f0> core/text-transform15# |<f1> Text transform on cells in column Location using expression value.toTitlecase()}"];
+"core/text-transform16#" [shape=record rankdir=LR label="{<f0> core/text-transform16# |<f1> Text transform on cells in column Credit using expression grel\:if(value==\"Y\",\"True\", \"False\")}"];
+"core/text-transform17#" [shape=record rankdir=LR label="{<f0> core/text-transform17# |<f1> Text transform on cells in column WIC using expression grel\:if(value==\"Y\",\"True\", \"False\")}"];
+"core/text-transform18#" [shape=record rankdir=LR label="{<f0> core/text-transform18# |<f1> Text transform on cells in column WICcash using expression grel\:if(value==\"Y\",\"True\", \"False\")}"];
+"core/text-transform19#" [shape=record rankdir=LR label="{<f0> core/text-transform19# |<f1> Text transform on cells in column SFMNP using expression grel\:if(value==\"Y\",\"True\", \"False\")}"];
+"core/text-transform20#" [shape=record rankdir=LR label="{<f0> core/text-transform20# |<f1> Text transform on cells in column SNAP using expression grel\:if(value==\"Y\",\"True\", \"False\")}"];
+"core/text-transform21#" [shape=record rankdir=LR label="{<f0> core/text-transform21# |<f1> Text transform on cells in column Organic using expression grel\:if(value==\"Y\",\"True\", \"False\")}"];
+"core/text-transform22#" [shape=record rankdir=LR label="{<f0> core/text-transform22# |<f1> Text transform on cells in column Bakedgoods using expression grel\:if(value==\"Y\",\"True\", \"False\")}"];
+"core/text-transform23#" [shape=record rankdir=LR label="{<f0> core/text-transform23# |<f1> Text transform on cells in column Cheese using expression grel\:if(value==\"Y\",\"True\", \"False\")}"];
+"core/text-transform24#" [shape=record rankdir=LR label="{<f0> core/text-transform24# |<f1> Text transform on cells in column Crafts using expression grel\:if(value==\"Y\",\"True\", \"False\")}"];
+"core/text-transform25#" [shape=record rankdir=LR label="{<f0> core/text-transform25# |<f1> Text transform on cells in column Flowers using expression grel\:if(value==\"Y\",\"True\", \"False\")}"];
+"core/text-transform26#" [shape=record rankdir=LR label="{<f0> core/text-transform26# |<f1> Text transform on cells in column Eggs using expression grel\:if(value==\"Y\",\"True\", \"False\")}"];
+"core/text-transform27#" [shape=record rankdir=LR label="{<f0> core/text-transform27# |<f1> Text transform on cells in column Seafood using expression grel\:if(value==\"Y\",\"True\", \"False\")}"];
+"core/text-transform28#" [shape=record rankdir=LR label="{<f0> core/text-transform28# |<f1> Text transform on cells in column Herbs using expression grel\:if(value==\"Y\",\"True\", \"False\")}"];
+"core/text-transform29#" [shape=record rankdir=LR label="{<f0> core/text-transform29# |<f1> Text transform on cells in column Vegetables using expression grel\:if(value==\"Y\",\"True\", \"False\")}"];
+"core/text-transform30#" [shape=record rankdir=LR label="{<f0> core/text-transform30# |<f1> Text transform on cells in column Honey using expression grel\:if(value==\"Y\",\"True\", \"False\")}"];
+"core/text-transform31#" [shape=record rankdir=LR label="{<f0> core/text-transform31# |<f1> Text transform on cells in column Jams using expression grel\:if(value==\"Y\",\"True\", \"False\")}"];
+"core/text-transform32#" [shape=record rankdir=LR label="{<f0> core/text-transform32# |<f1> Text transform on cells in column Maple using expression grel\:if(value==\"Y\",\"True\", \"False\")}"];
+"core/text-transform33#" [shape=record rankdir=LR label="{<f0> core/text-transform33# |<f1> Text transform on cells in column Meat using expression grel\:if(value==\"Y\",\"True\", \"False\")}"];
+"core/text-transform34#" [shape=record rankdir=LR label="{<f0> core/text-transform34# |<f1> Text transform on cells in column Nursery using expression grel\:if(value==\"Y\",\"True\", \"False\")}"];
+"core/text-transform35#" [shape=record rankdir=LR label="{<f0> core/text-transform35# |<f1> Text transform on cells in column Nuts using expression grel\:if(value==\"Y\",\"True\", \"False\")}"];
+"core/text-transform36#" [shape=record rankdir=LR label="{<f0> core/text-transform36# |<f1> Text transform on cells in column Plants using expression grel\:if(value==\"Y\",\"True\", \"False\")}"];
+"core/text-transform37#" [shape=record rankdir=LR label="{<f0> core/text-transform37# |<f1> Text transform on cells in column Poultry using expression grel\:if(value==\"Y\",\"True\", \"False\")}"];
+"core/text-transform38#" [shape=record rankdir=LR label="{<f0> core/text-transform38# |<f1> Text transform on cells in column Prepared using expression grel\:if(value==\"Y\",\"True\", \"False\")}"];
+"core/text-transform39#" [shape=record rankdir=LR label="{<f0> core/text-transform39# |<f1> Text transform on cells in column Soap using expression grel\:if(value==\"Y\",\"True\", \"False\")}"];
+"core/text-transform40#" [shape=record rankdir=LR label="{<f0> core/text-transform40# |<f1> Text transform on cells in column Trees using expression grel\:if(value==\"Y\",\"True\", \"False\")}"];
+"core/text-transform41#" [shape=record rankdir=LR label="{<f0> core/text-transform41# |<f1> Text transform on cells in column Wine using expression grel\:if(value==\"Y\",\"True\", \"False\")}"];
+"core/text-transform42#" [shape=record rankdir=LR label="{<f0> core/text-transform42# |<f1> Text transform on cells in column Coffee using expression grel\:if(value==\"Y\",\"True\", \"False\")}"];
+"core/text-transform43#" [shape=record rankdir=LR label="{<f0> core/text-transform43# |<f1> Text transform on cells in column Beans using expression grel\:if(value==\"Y\",\"True\", \"False\")}"];
+"core/text-transform44#" [shape=record rankdir=LR label="{<f0> core/text-transform44# |<f1> Text transform on cells in column Fruits using expression grel\:if(value==\"Y\",\"True\", \"False\")}"];
+"core/text-transform45#" [shape=record rankdir=LR label="{<f0> core/text-transform45# |<f1> Text transform on cells in column Grains using expression grel\:if(value==\"Y\",\"True\", \"False\")}"];
+"core/text-transform46#" [shape=record rankdir=LR label="{<f0> core/text-transform46# |<f1> Text transform on cells in column Juices using expression grel\:if(value==\"Y\",\"True\", \"False\")}"];
+"core/text-transform47#" [shape=record rankdir=LR label="{<f0> core/text-transform47# |<f1> Text transform on cells in column Mushrooms using expression grel\:if(value==\"Y\",\"True\", \"False\")}"];
+"core/text-transform48#" [shape=record rankdir=LR label="{<f0> core/text-transform48# |<f1> Text transform on cells in column PetFood using expression grel\:if(value==\"Y\",\"True\", \"False\")}"];
+"core/text-transform49#" [shape=record rankdir=LR label="{<f0> core/text-transform49# |<f1> Text transform on cells in column Tofu using expression grel\:if(value==\"Y\",\"True\", \"False\")}"];
+"core/text-transform50#" [shape=record rankdir=LR label="{<f0> core/text-transform50# |<f1> Text transform on cells in column WildHarvested using expression grel\:if(value==\"Y\",\"True\", \"False\")}"];
+"core/text-transform51#" [shape=record rankdir=LR label="{<f0> core/text-transform51# |<f1> Text transform on cells in column Season1Date using expression grel\:value.replace(/%@#!\\\\\\[\\]\\(\\)\\?/,\"\")}"];
+"core/column-split0#" [shape=record rankdir=LR label="{<f0> core/column-split0# |<f1> Split column Season1Date by separator}"];
+"core/column-rename0#" [shape=record rankdir=LR label="{<f0> core/column-rename0# |<f1> Rename column Season1Date 1 to Season1FromDate}"];
+"core/column-rename1#" [shape=record rankdir=LR label="{<f0> core/column-rename1# |<f1> Rename column Season1Date 2 to Season1ToDate}"];
+"core/column-split1#" [shape=record rankdir=LR label="{<f0> core/column-split1# |<f1> Split column Season1Time by separator}"];
+"core/column-removal0#" [shape=record rankdir=LR label="{<f0> core/column-removal0# |<f1> Remove column Season1Time 1}"];
+"core/column-removal1#" [shape=record rankdir=LR label="{<f0> core/column-removal1# |<f1> Remove column Season1Time 2}"];
+"core/column-removal2#" [shape=record rankdir=LR label="{<f0> core/column-removal2# |<f1> Remove column Season1Time 3}"];
+"core/column-removal3#" [shape=record rankdir=LR label="{<f0> core/column-removal3# |<f1> Remove column Season1Time 4}"];
+"core/column-removal4#" [shape=record rankdir=LR label="{<f0> core/column-removal4# |<f1> Remove column Season1Time 5}"];
+"core/column-removal5#" [shape=record rankdir=LR label="{<f0> core/column-removal5# |<f1> Remove column Season1Time 6}"];
+"core/column-removal6#" [shape=record rankdir=LR label="{<f0> core/column-removal6# |<f1> Remove column Season1Time 7}"];
+"core/column-removal7#" [shape=record rankdir=LR label="{<f0> core/column-removal7# |<f1> Remove column Season1Time 8}"];
+"core/column-split2#" [shape=record rankdir=LR label="{<f0> core/column-split2# |<f1> Split column Season1Time by separator}"];
+"core/column-split3#" [shape=record rankdir=LR label="{<f0> core/column-split3# |<f1> Split column Season2Date by separator}"];
+"core/column-rename2#" [shape=record rankdir=LR label="{<f0> core/column-rename2# |<f1> Rename column Season2Date 1 to Season2FromDate}"];
+"core/column-rename3#" [shape=record rankdir=LR label="{<f0> core/column-rename3# |<f1> Rename column Season2Date 2 to Season2ToDate}"];
+"core/column-split4#" [shape=record rankdir=LR label="{<f0> core/column-split4# |<f1> Split column Season3Date by separator}"];
+"core/column-rename4#" [shape=record rankdir=LR label="{<f0> core/column-rename4# |<f1> Rename column Season3Date 1 to Season3FromDate}"];
+"core/column-rename5#" [shape=record rankdir=LR label="{<f0> core/column-rename5# |<f1> Rename column Season3Date 2 to Season3ToDate}"];
+"core/column-split5#" [shape=record rankdir=LR label="{<f0> core/column-split5# |<f1> Split column Season4Date by separator}"];
+"core/column-rename6#" [shape=record rankdir=LR label="{<f0> core/column-rename6# |<f1> Rename column Season4Date 1 to Season4FromDate}"];
+"core/column-rename7#" [shape=record rankdir=LR label="{<f0> core/column-rename7# |<f1> Rename column Season4Date 2 to Season4ToDate}"];
+"core/column-split6#" [shape=record rankdir=LR label="{<f0> core/column-split6# |<f1> Split column Season2Time by separator}"];
+"core/column-split7#" [shape=record rankdir=LR label="{<f0> core/column-split7# |<f1> Split column Season3Time by separator}"];
+"core/column-split8#" [shape=record rankdir=LR label="{<f0> core/column-split8# |<f1> Split column Season4Time by separator}"];
+"core/text-transform52#" [shape=record rankdir=LR label="{<f0> core/text-transform52# |<f1> Text transform on cells in column x using expression grel\:round(value.toNumber()*10000)/10000.}"];
+"core/text-transform53#" [shape=record rankdir=LR label="{<f0> core/text-transform53# |<f1> Text transform on cells in column y using expression grel\:round(value.toNumber()*10000)/10000.}"];
+
+/* Style for nodes representing non-parameter data channels in workflow */
+node[shape=box style="rounded,filled" fillcolor="#FFFFCC" peripheries=1 fontname=Helvetica]
+
+/* Nodes for non-parameter data channels in workflow */
+table79
+table0
+table1
+table2
+table3
+table4
+table5
+table6
+table7
+table8
+table9
+table10
+table11
+table12
+table13
+table14
+table15
+table16
+table17
+table18
+table19
+table20
+table21
+table22
+table23
+table24
+table25
+table26
+table27
+table28
+table29
+table30
+table31
+table32
+table33
+table34
+table35
+table36
+table37
+table38
+table39
+table40
+table41
+table42
+table43
+table44
+table45
+table46
+table47
+table48
+table49
+table50
+table51
+table52
+table53
+table54
+table55
+table56
+table57
+table58
+table59
+table60
+table61
+table62
+table63
+table64
+table65
+table66
+table67
+table68
+table69
+table70
+table71
+table72
+table73
+table74
+table75
+table76
+table77
+table78
+
+/* Style for nodes representing parameter channels in workflow */
+node[shape=box style="rounded,filled" fillcolor="#FCFCFC" peripheries=1 fontname=Helvetica]
+
+/* Nodes representing parameter channels in workflow */
+"col-name:MarketName"
+"expression:value.trim()"
+"expression:value.toTitlecase()"
+"col-name:Website"
+"col-name:Facebook"
+"col-name:Twitter"
+"col-name:Youtube"
+"col-name:OtherMedia"
+"col-name:street"
+"col-name:County"
+"col-name:State"
+"col-name:Location"
+"col-name:Credit"
+"expression:grel:if(value==\"Y\",\"True\",_\"False\")"
+"col-name:WIC"
+"col-name:WICcash"
+"col-name:SFMNP"
+"col-name:SNAP"
+"col-name:Organic"
+"col-name:Bakedgoods"
+"col-name:Cheese"
+"col-name:Crafts"
+"col-name:Flowers"
+"col-name:Eggs"
+"col-name:Seafood"
+"col-name:Herbs"
+"col-name:Vegetables"
+"col-name:Honey"
+"col-name:Jams"
+"col-name:Maple"
+"col-name:Meat"
+"col-name:Nursery"
+"col-name:Nuts"
+"col-name:Plants"
+"col-name:Poultry"
+"col-name:Prepared"
+"col-name:Soap"
+"col-name:Trees"
+"col-name:Wine"
+"col-name:Coffee"
+"col-name:Beans"
+"col-name:Fruits"
+"col-name:Grains"
+"col-name:Juices"
+"col-name:Mushrooms"
+"col-name:PetFood"
+"col-name:Tofu"
+"col-name:WildHarvested"
+"col-name:Season1Date"
+"expression:grel:value.replace(/%@#!\\\\\\[\\]\\(\\)\\?/,\"\")"
+"separator:\"_to_\""
+"removeOriginalColumn:False"
+"oldColumnName:Season1Date_1"
+"newColumnName:Season1FromDate"
+"oldColumnName:Season1Date_2"
+"newColumnName:Season1ToDate"
+"col-name:Season1Time"
+"separator:\":_\""
+"col-name:Season1Time_1"
+"col-name:Season1Time_2"
+"col-name:Season1Time_3"
+"col-name:Season1Time_4"
+"col-name:Season1Time_5"
+"col-name:Season1Time_6"
+"col-name:Season1Time_7"
+"col-name:Season1Time_8"
+"separator:\";\""
+"col-name:Season2Date"
+"oldColumnName:Season2Date_1"
+"newColumnName:Season2FromDate"
+"oldColumnName:Season2Date_2"
+"newColumnName:Season2ToDate"
+"col-name:Season3Date"
+"removeOriginalColumn:True"
+"oldColumnName:Season3Date_1"
+"newColumnName:Season3FromDate"
+"oldColumnName:Season3Date_2"
+"newColumnName:Season3ToDate"
+"col-name:Season4Date"
+"oldColumnName:Season4Date_1"
+"newColumnName:Season4FromDate"
+"oldColumnName:Season4Date_2"
+"newColumnName:Season4ToDate"
+"col-name:Season2Time"
+"col-name:Season3Time"
+"col-name:Season4Time"
+"col-name:x"
+"expression:grel:round(value.toNumber()*10000)/10000."
+"col-name:y"
+
+/* Edges representing connections between programs and channels */
+"core/text-transform0#" -> table1
+"col-name:MarketName" -> "core/text-transform0#"
+"expression:value.trim()" -> "core/text-transform0#"
+table0 -> "core/text-transform0#"
+"core/text-transform1#" -> table2
+"col-name:MarketName" -> "core/text-transform1#"
+"expression:value.toTitlecase()" -> "core/text-transform1#"
+table1 -> "core/text-transform1#"
+"core/text-transform2#" -> table3
+"col-name:Website" -> "core/text-transform2#"
+"expression:value.trim()" -> "core/text-transform2#"
+table2 -> "core/text-transform2#"
+"core/text-transform3#" -> table4
+"col-name:Facebook" -> "core/text-transform3#"
+"expression:value.trim()" -> "core/text-transform3#"
+table3 -> "core/text-transform3#"
+"core/text-transform4#" -> table5
+"col-name:Twitter" -> "core/text-transform4#"
+"expression:value.trim()" -> "core/text-transform4#"
+table4 -> "core/text-transform4#"
+"core/text-transform5#" -> table6
+"col-name:Youtube" -> "core/text-transform5#"
+"expression:value.trim()" -> "core/text-transform5#"
+table5 -> "core/text-transform5#"
+"core/text-transform6#" -> table7
+"col-name:OtherMedia" -> "core/text-transform6#"
+"expression:value.trim()" -> "core/text-transform6#"
+table6 -> "core/text-transform6#"
+"core/text-transform7#" -> table8
+"col-name:street" -> "core/text-transform7#"
+"expression:value.toTitlecase()" -> "core/text-transform7#"
+table7 -> "core/text-transform7#"
+"core/text-transform8#" -> table9
+"col-name:County" -> "core/text-transform8#"
+"expression:value.trim()" -> "core/text-transform8#"
+table8 -> "core/text-transform8#"
+"core/text-transform9#" -> table10
+"col-name:County" -> "core/text-transform9#"
+"expression:value.toTitlecase()" -> "core/text-transform9#"
+table9 -> "core/text-transform9#"
+"core/text-transform10#" -> table11
+"col-name:State" -> "core/text-transform10#"
+"expression:value.trim()" -> "core/text-transform10#"
+table10 -> "core/text-transform10#"
+"core/text-transform11#" -> table12
+"col-name:State" -> "core/text-transform11#"
+"expression:value.toTitlecase()" -> "core/text-transform11#"
+table11 -> "core/text-transform11#"
+"core/text-transform12#" -> table13
+"col-name:Location" -> "core/text-transform12#"
+"expression:value.trim()" -> "core/text-transform12#"
+table12 -> "core/text-transform12#"
+"core/text-transform13#" -> table14
+"col-name:Location" -> "core/text-transform13#"
+"expression:value.toTitlecase()" -> "core/text-transform13#"
+table13 -> "core/text-transform13#"
+"core/text-transform14#" -> table15
+"col-name:Location" -> "core/text-transform14#"
+"expression:value.trim()" -> "core/text-transform14#"
+table14 -> "core/text-transform14#"
+"core/text-transform15#" -> table16
+"col-name:Location" -> "core/text-transform15#"
+"expression:value.toTitlecase()" -> "core/text-transform15#"
+table15 -> "core/text-transform15#"
+"core/text-transform16#" -> table17
+"col-name:Credit" -> "core/text-transform16#"
+"expression:grel:if(value==\"Y\",\"True\",_\"False\")" -> "core/text-transform16#"
+table16 -> "core/text-transform16#"
+"core/text-transform17#" -> table18
+"col-name:WIC" -> "core/text-transform17#"
+"expression:grel:if(value==\"Y\",\"True\",_\"False\")" -> "core/text-transform17#"
+table17 -> "core/text-transform17#"
+"core/text-transform18#" -> table19
+"col-name:WICcash" -> "core/text-transform18#"
+"expression:grel:if(value==\"Y\",\"True\",_\"False\")" -> "core/text-transform18#"
+table18 -> "core/text-transform18#"
+"core/text-transform19#" -> table20
+"col-name:SFMNP" -> "core/text-transform19#"
+"expression:grel:if(value==\"Y\",\"True\",_\"False\")" -> "core/text-transform19#"
+table19 -> "core/text-transform19#"
+"core/text-transform20#" -> table21
+"col-name:SNAP" -> "core/text-transform20#"
+"expression:grel:if(value==\"Y\",\"True\",_\"False\")" -> "core/text-transform20#"
+table20 -> "core/text-transform20#"
+"core/text-transform21#" -> table22
+"col-name:Organic" -> "core/text-transform21#"
+"expression:grel:if(value==\"Y\",\"True\",_\"False\")" -> "core/text-transform21#"
+table21 -> "core/text-transform21#"
+"core/text-transform22#" -> table23
+"col-name:Bakedgoods" -> "core/text-transform22#"
+"expression:grel:if(value==\"Y\",\"True\",_\"False\")" -> "core/text-transform22#"
+table22 -> "core/text-transform22#"
+"core/text-transform23#" -> table24
+"col-name:Cheese" -> "core/text-transform23#"
+"expression:grel:if(value==\"Y\",\"True\",_\"False\")" -> "core/text-transform23#"
+table23 -> "core/text-transform23#"
+"core/text-transform24#" -> table25
+"col-name:Crafts" -> "core/text-transform24#"
+"expression:grel:if(value==\"Y\",\"True\",_\"False\")" -> "core/text-transform24#"
+table24 -> "core/text-transform24#"
+"core/text-transform25#" -> table26
+"col-name:Flowers" -> "core/text-transform25#"
+"expression:grel:if(value==\"Y\",\"True\",_\"False\")" -> "core/text-transform25#"
+table25 -> "core/text-transform25#"
+"core/text-transform26#" -> table27
+"col-name:Eggs" -> "core/text-transform26#"
+"expression:grel:if(value==\"Y\",\"True\",_\"False\")" -> "core/text-transform26#"
+table26 -> "core/text-transform26#"
+"core/text-transform27#" -> table28
+"col-name:Seafood" -> "core/text-transform27#"
+"expression:grel:if(value==\"Y\",\"True\",_\"False\")" -> "core/text-transform27#"
+table27 -> "core/text-transform27#"
+"core/text-transform28#" -> table29
+"col-name:Herbs" -> "core/text-transform28#"
+"expression:grel:if(value==\"Y\",\"True\",_\"False\")" -> "core/text-transform28#"
+table28 -> "core/text-transform28#"
+"core/text-transform29#" -> table30
+"col-name:Vegetables" -> "core/text-transform29#"
+"expression:grel:if(value==\"Y\",\"True\",_\"False\")" -> "core/text-transform29#"
+table29 -> "core/text-transform29#"
+"core/text-transform30#" -> table31
+"col-name:Honey" -> "core/text-transform30#"
+"expression:grel:if(value==\"Y\",\"True\",_\"False\")" -> "core/text-transform30#"
+table30 -> "core/text-transform30#"
+"core/text-transform31#" -> table32
+"col-name:Jams" -> "core/text-transform31#"
+"expression:grel:if(value==\"Y\",\"True\",_\"False\")" -> "core/text-transform31#"
+table31 -> "core/text-transform31#"
+"core/text-transform32#" -> table33
+"col-name:Maple" -> "core/text-transform32#"
+"expression:grel:if(value==\"Y\",\"True\",_\"False\")" -> "core/text-transform32#"
+table32 -> "core/text-transform32#"
+"core/text-transform33#" -> table34
+"col-name:Meat" -> "core/text-transform33#"
+"expression:grel:if(value==\"Y\",\"True\",_\"False\")" -> "core/text-transform33#"
+table33 -> "core/text-transform33#"
+"core/text-transform34#" -> table35
+"col-name:Nursery" -> "core/text-transform34#"
+"expression:grel:if(value==\"Y\",\"True\",_\"False\")" -> "core/text-transform34#"
+table34 -> "core/text-transform34#"
+"core/text-transform35#" -> table36
+"col-name:Nuts" -> "core/text-transform35#"
+"expression:grel:if(value==\"Y\",\"True\",_\"False\")" -> "core/text-transform35#"
+table35 -> "core/text-transform35#"
+"core/text-transform36#" -> table37
+"col-name:Plants" -> "core/text-transform36#"
+"expression:grel:if(value==\"Y\",\"True\",_\"False\")" -> "core/text-transform36#"
+table36 -> "core/text-transform36#"
+"core/text-transform37#" -> table38
+"col-name:Poultry" -> "core/text-transform37#"
+"expression:grel:if(value==\"Y\",\"True\",_\"False\")" -> "core/text-transform37#"
+table37 -> "core/text-transform37#"
+"core/text-transform38#" -> table39
+"col-name:Prepared" -> "core/text-transform38#"
+"expression:grel:if(value==\"Y\",\"True\",_\"False\")" -> "core/text-transform38#"
+table38 -> "core/text-transform38#"
+"core/text-transform39#" -> table40
+"col-name:Soap" -> "core/text-transform39#"
+"expression:grel:if(value==\"Y\",\"True\",_\"False\")" -> "core/text-transform39#"
+table39 -> "core/text-transform39#"
+"core/text-transform40#" -> table41
+"col-name:Trees" -> "core/text-transform40#"
+"expression:grel:if(value==\"Y\",\"True\",_\"False\")" -> "core/text-transform40#"
+table40 -> "core/text-transform40#"
+"core/text-transform41#" -> table42
+"col-name:Wine" -> "core/text-transform41#"
+"expression:grel:if(value==\"Y\",\"True\",_\"False\")" -> "core/text-transform41#"
+table41 -> "core/text-transform41#"
+"core/text-transform42#" -> table43
+"col-name:Coffee" -> "core/text-transform42#"
+"expression:grel:if(value==\"Y\",\"True\",_\"False\")" -> "core/text-transform42#"
+table42 -> "core/text-transform42#"
+"core/text-transform43#" -> table44
+"col-name:Beans" -> "core/text-transform43#"
+"expression:grel:if(value==\"Y\",\"True\",_\"False\")" -> "core/text-transform43#"
+table43 -> "core/text-transform43#"
+"core/text-transform44#" -> table45
+"col-name:Fruits" -> "core/text-transform44#"
+"expression:grel:if(value==\"Y\",\"True\",_\"False\")" -> "core/text-transform44#"
+table44 -> "core/text-transform44#"
+"core/text-transform45#" -> table46
+"col-name:Grains" -> "core/text-transform45#"
+"expression:grel:if(value==\"Y\",\"True\",_\"False\")" -> "core/text-transform45#"
+table45 -> "core/text-transform45#"
+"core/text-transform46#" -> table47
+"col-name:Juices" -> "core/text-transform46#"
+"expression:grel:if(value==\"Y\",\"True\",_\"False\")" -> "core/text-transform46#"
+table46 -> "core/text-transform46#"
+"core/text-transform47#" -> table48
+"col-name:Mushrooms" -> "core/text-transform47#"
+"expression:grel:if(value==\"Y\",\"True\",_\"False\")" -> "core/text-transform47#"
+table47 -> "core/text-transform47#"
+"core/text-transform48#" -> table49
+"col-name:PetFood" -> "core/text-transform48#"
+"expression:grel:if(value==\"Y\",\"True\",_\"False\")" -> "core/text-transform48#"
+table48 -> "core/text-transform48#"
+"core/text-transform49#" -> table50
+"col-name:Tofu" -> "core/text-transform49#"
+"expression:grel:if(value==\"Y\",\"True\",_\"False\")" -> "core/text-transform49#"
+table49 -> "core/text-transform49#"
+"core/text-transform50#" -> table51
+"col-name:WildHarvested" -> "core/text-transform50#"
+"expression:grel:if(value==\"Y\",\"True\",_\"False\")" -> "core/text-transform50#"
+table50 -> "core/text-transform50#"
+"core/text-transform51#" -> table52
+"col-name:Season1Date" -> "core/text-transform51#"
+"expression:grel:value.replace(/%@#!\\\\\\[\\]\\(\\)\\?/,\"\")" -> "core/text-transform51#"
+table51 -> "core/text-transform51#"
+"core/column-split0#" -> table53
+"col-name:Season1Date" -> "core/column-split0#"
+"separator:\"_to_\"" -> "core/column-split0#"
+"removeOriginalColumn:False" -> "core/column-split0#"
+table52 -> "core/column-split0#"
+"core/column-rename0#" -> table54
+"oldColumnName:Season1Date_1" -> "core/column-rename0#"
+"newColumnName:Season1FromDate" -> "core/column-rename0#"
+table53 -> "core/column-rename0#"
+"core/column-rename1#" -> table55
+"oldColumnName:Season1Date_2" -> "core/column-rename1#"
+"newColumnName:Season1ToDate" -> "core/column-rename1#"
+table54 -> "core/column-rename1#"
+"core/column-split1#" -> table56
+"col-name:Season1Time" -> "core/column-split1#"
+"separator:\":_\"" -> "core/column-split1#"
+"removeOriginalColumn:False" -> "core/column-split1#"
+table55 -> "core/column-split1#"
+"core/column-removal0#" -> table57
+"col-name:Season1Time_1" -> "core/column-removal0#"
+table56 -> "core/column-removal0#"
+"core/column-removal1#" -> table58
+"col-name:Season1Time_2" -> "core/column-removal1#"
+table57 -> "core/column-removal1#"
+"core/column-removal2#" -> table59
+"col-name:Season1Time_3" -> "core/column-removal2#"
+table58 -> "core/column-removal2#"
+"core/column-removal3#" -> table60
+"col-name:Season1Time_4" -> "core/column-removal3#"
+table59 -> "core/column-removal3#"
+"core/column-removal4#" -> table61
+"col-name:Season1Time_5" -> "core/column-removal4#"
+table60 -> "core/column-removal4#"
+"core/column-removal5#" -> table62
+"col-name:Season1Time_6" -> "core/column-removal5#"
+table61 -> "core/column-removal5#"
+"core/column-removal6#" -> table63
+"col-name:Season1Time_7" -> "core/column-removal6#"
+table62 -> "core/column-removal6#"
+"core/column-removal7#" -> table64
+"col-name:Season1Time_8" -> "core/column-removal7#"
+table63 -> "core/column-removal7#"
+"core/column-split2#" -> table65
+"col-name:Season1Time" -> "core/column-split2#"
+"separator:\";\"" -> "core/column-split2#"
+"removeOriginalColumn:False" -> "core/column-split2#"
+table64 -> "core/column-split2#"
+"core/column-split3#" -> table66
+"col-name:Season2Date" -> "core/column-split3#"
+"separator:\"_to_\"" -> "core/column-split3#"
+"removeOriginalColumn:False" -> "core/column-split3#"
+table65 -> "core/column-split3#"
+"core/column-rename2#" -> table67
+"oldColumnName:Season2Date_1" -> "core/column-rename2#"
+"newColumnName:Season2FromDate" -> "core/column-rename2#"
+table66 -> "core/column-rename2#"
+"core/column-rename3#" -> table68
+"oldColumnName:Season2Date_2" -> "core/column-rename3#"
+"newColumnName:Season2ToDate" -> "core/column-rename3#"
+table67 -> "core/column-rename3#"
+"core/column-split4#" -> table69
+"col-name:Season3Date" -> "core/column-split4#"
+"separator:\"_to_\"" -> "core/column-split4#"
+"removeOriginalColumn:True" -> "core/column-split4#"
+table68 -> "core/column-split4#"
+"core/column-rename4#" -> table70
+"oldColumnName:Season3Date_1" -> "core/column-rename4#"
+"newColumnName:Season3FromDate" -> "core/column-rename4#"
+table69 -> "core/column-rename4#"
+"core/column-rename5#" -> table71
+"oldColumnName:Season3Date_2" -> "core/column-rename5#"
+"newColumnName:Season3ToDate" -> "core/column-rename5#"
+table70 -> "core/column-rename5#"
+"core/column-split5#" -> table72
+"col-name:Season4Date" -> "core/column-split5#"
+"separator:\"_to_\"" -> "core/column-split5#"
+"removeOriginalColumn:False" -> "core/column-split5#"
+table71 -> "core/column-split5#"
+"core/column-rename6#" -> table73
+"oldColumnName:Season4Date_1" -> "core/column-rename6#"
+"newColumnName:Season4FromDate" -> "core/column-rename6#"
+table72 -> "core/column-rename6#"
+"core/column-rename7#" -> table74
+"oldColumnName:Season4Date_2" -> "core/column-rename7#"
+"newColumnName:Season4ToDate" -> "core/column-rename7#"
+table73 -> "core/column-rename7#"
+"core/column-split6#" -> table75
+"col-name:Season2Time" -> "core/column-split6#"
+"separator:\";\"" -> "core/column-split6#"
+"removeOriginalColumn:False" -> "core/column-split6#"
+table74 -> "core/column-split6#"
+"core/column-split7#" -> table76
+"col-name:Season3Time" -> "core/column-split7#"
+"separator:\";\"" -> "core/column-split7#"
+"removeOriginalColumn:False" -> "core/column-split7#"
+table75 -> "core/column-split7#"
+"core/column-split8#" -> table77
+"col-name:Season4Time" -> "core/column-split8#"
+"separator:\";\"" -> "core/column-split8#"
+"removeOriginalColumn:False" -> "core/column-split8#"
+table76 -> "core/column-split8#"
+"core/text-transform52#" -> table78
+"col-name:x" -> "core/text-transform52#"
+"expression:grel:round(value.toNumber()*10000)/10000." -> "core/text-transform52#"
+table77 -> "core/text-transform52#"
+"core/text-transform53#" -> table79
+"col-name:y" -> "core/text-transform53#"
+"expression:grel:round(value.toNumber()*10000)/10000." -> "core/text-transform53#"
+table78 -> "core/text-transform53#"
+
+/* End of double cluster for drawing box around nodes in workflow */
+}}
+
+/* End of top-level graph */
+}
